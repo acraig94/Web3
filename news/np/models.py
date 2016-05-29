@@ -10,9 +10,9 @@ class Article(models.Model):
     )
 
     author = models.CharField(max_length=100)
-    title = models.TextField(max_length=140)
+    title = models.CharField(max_length=140)
     section = models.CharField(max_length=15, choices=SECTION_CHOICES, default='NZ')
-    intro = models.CharField(max_length=200)
+    intro = models.TextField(max_length=200)
     text = models.TextField(null=True)
     image = models.URLField(null=True)
     createdDate = models.DateTimeField(auto_now_add=True)
