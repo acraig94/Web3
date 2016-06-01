@@ -1,0 +1,18 @@
+{% extends 'np/index.html' %}
+{% block content %}
+	{% for article in articles %}
+		<h2>
+			<a href="article_{{article.pk}}">{{article.title}}</a>
+		</h2>
+		<div class="row">
+			<div class="col-md-4">
+				<img class="img-thumbnail" src={{article.image}}>
+			</div>
+			<div class="col-md-8">
+				<p>
+					{{article.intro}}
+				</p>
+			</div>
+		</div>
+	{% endfor %}
+{% endblock %}

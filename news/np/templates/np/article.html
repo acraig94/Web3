@@ -1,0 +1,17 @@
+{% extends 'np/index.html' %}
+{% block content %}
+	<h3 class="text-center">
+		{{article.title}}
+	</h3>
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+			<img alt="article img" src="{{article.image}}" class="img-thumbnail" />
+		</div>
+	</div>
+	<p>
+		{{article.text}}
+	</p>
+	<p>
+	<small>By {{article.author}}</small>
+	</p>
+{% endblock %}
