@@ -1,6 +1,6 @@
 from django.db import models
 
-
+# Article model
 class Article(models.Model):
     SECTION_CHOICES = (
         ('NZ', 'NZ'),
