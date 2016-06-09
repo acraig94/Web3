@@ -4,7 +4,7 @@ from .forms import ArticleForm
 from django.contrib.auth.decorators import login_required
 
 def index(request):
-    articles = Article.objects.all().annotate().order_by('-createdDate')[:5] #annotate
+    articles = Article.objects.all().order_by('-createdDate')#[5] #annotate
     return render(request, 'np/article_list.html', {'articles': articles})
 
 def nz(request):
